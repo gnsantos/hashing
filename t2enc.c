@@ -52,9 +52,26 @@ int prime_m3(int m)
 static link NEW(Item item, link next)
 {
   link x = malloc(sizeof *x);
+  
+  if(next != NULL && next->item != NULLitem){
+    if(!eq(next->item->lema, item->lema)){
+      x->item = item;
+      x->next = next;
+      N--;
+      return x;
+    }
+    else{
+      item->occurencies->next = next->item->occurencies;
+      next->item->occurencies = item->occurencies;
+      N--;
+    }
+    return next;
+  }
+
   x->item = item;
   x->next = next;
   return x;
+
 }
 
 int ST2count()

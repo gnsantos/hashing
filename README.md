@@ -1,4 +1,4 @@
-hashing
-=======
+LOCALIZÇÃO DE PALAVRAS II - HASH TABLES
+=======================================
 
-ep4 de ed
+EP4 de Estruturas de Dados.
