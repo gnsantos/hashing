@@ -57,7 +57,7 @@ static link NEW(Item item, link next)
     if(!eq(next->item->lema, item->lema)){
       x->item = item;
       x->next = next;
-      N--;
+      
       return x;
     }
     else{
